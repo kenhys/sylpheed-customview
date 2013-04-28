@@ -4,6 +4,8 @@
 #define CUSTOMVIEW "customview"
 #define CUSTOMVIEW_RC "customviewrc"
 
+#define OPTION_HIDE_FOLDERVIEW "hide-folderview"
+
 typedef struct _CustomViewOption CustomViewOption;
 
 struct _CustomViewOption {

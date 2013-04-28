@@ -51,6 +51,12 @@ void plugin_load(void)
                          G_CALLBACK(init_done_cb),
                          NULL);
 
+  sylpf_load_option_rcfile((SylPluginFactoryOption*)&option,
+                           CUSTOMVIEW_RC);
+  option.hide_folderview_flag = g_key_file_get_boolean(option.rcfile,
+                                                       SYLPF_ID,
+                                                       OPTION_HIDE_FOLDERVIEW,
+                                                       NULL);
   SYLPF_END_FUNC;
 }
 
