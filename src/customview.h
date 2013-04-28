@@ -24,5 +24,6 @@ static void exec_customview_menu_cb(void);
 static GtkWidget *create_preference_dialog(CustomViewOption *option);
 static void create_config_main_page(GtkWidget *notebook,
                                       CustomViewOption *option);
+static void save_preference_dialog(CustomViewOption *option);
 
 #endif

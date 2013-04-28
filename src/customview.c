@@ -100,6 +100,7 @@ static void exec_customview_menu_cb(void)
 
   switch (response) {
   case GTK_RESPONSE_OK:
+    save_preference_dialog(&option);
     break;
   case GTK_RESPONSE_CANCEL:
   default:
@@ -179,3 +180,23 @@ static void create_config_main_page(GtkWidget *notebook,
 }
 
 
+static void save_preference_dialog(CustomViewOption *option)
+{
+  gboolean flag;
+
+  SYLPF_START_FUNC;
+
+  flag = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(option->hide_folderview));
+  option->hide_folderview_flag = flag;
+
+  g_key_file_set_boolean(option->rcfile,
+                         SYLPF_ID,
+                         OPTION_HIDE_FOLDERVIEW,
+                         option->hide_folderview_flag);
+
+  sylpf_save_option_rcfile((SylPluginFactoryOption*)option);
+
+  sylpf_update_folderview_visibility(!flag);
+
+  SYLPF_END_FUNC;
+}
