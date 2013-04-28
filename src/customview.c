@@ -170,6 +170,9 @@ static void create_config_main_page(GtkWidget *notebook,
   option->hide_folderview = gtk_check_button_new_with_label(_("Hide folder view"));
   folderview = sylpf_pack_widget_with_aligned_frame(option->hide_folderview, _("View option"));
 
+  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(option->hide_folderview),
+                               option->hide_folderview_flag);
+
   gtk_box_pack_start(GTK_BOX(vbox), folderview, FALSE, FALSE, 0);
 
   label = gtk_label_new(_("General"));
