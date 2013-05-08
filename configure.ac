@@ -30,8 +30,8 @@ if test "x$plugin_debug" != "xno"; then
     CFLAGS="$CFLAGS -O0 -g"
     CXXFLAGS="$CXXFLAGS -O0 -g"
   elif test "$GCC" = "yes"; then
-    CFLAGS="$CFLAGS -O0 -ggdb3"
-    CXXFLAGS="$CXXFLAGS -O0 -ggdb3"
+    CFLAGS="$CFLAGS -O0 -g3"
+    CXXFLAGS="$CXXFLAGS -O0 -g3"
   fi
 fi
 AC_SUBST(plugin_debug)
