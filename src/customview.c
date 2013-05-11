@@ -38,6 +38,8 @@ static CustomViewOption option;
 
 void plugin_load(void)
 {
+  gpointer user_data;
+
   SYLPF_START_FUNC;
 
   syl_init_gettext(CUSTOMVIEW, "lib/locale");
@@ -51,7 +53,8 @@ void plugin_load(void)
                          G_CALLBACK(init_done_cb),
                          NULL);
 
-  sylpf_load_option_rcfile((SylPluginFactoryOption*)&option,
+  user_data = &option;
+  sylpf_load_option_rcfile((SylPluginFactoryOption*)user_data,
                            CUSTOMVIEW_RC);
   option.hide_folderview_flag = g_key_file_get_boolean(option.rcfile,
                                                        SYLPF_ID,
