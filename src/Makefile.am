@@ -6,8 +6,6 @@ customview_la_SOURCES = customview.c \
 
 customview_la_LDFLAGS = -module -no-undefined -avoid-version
 
-AUTOMAKE_OPTIONS = subdir-objects
-
 AM_CPPFLAGS = \
 	$(GTK_CFLAGS) \
 	-I$(includedir) \
