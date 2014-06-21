@@ -8,7 +8,7 @@ customview_la_LDFLAGS = -module -no-undefined -avoid-version
 
 AUTOMAKE_OPTIONS = subdir-objects
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	$(GTK_CFLAGS) \
 	-I$(includedir) \
 	-I$(sylpheed_build_dir) \
