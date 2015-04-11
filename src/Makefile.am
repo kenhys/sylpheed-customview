@@ -1,8 +1,6 @@
 lib_LTLIBRARIES = customview.la
 
-customview_la_SOURCES = customview.c \
-        $(sylplugin_factory_source_dir)/src/sylplugin_factory.c \
-        $(sylplugin_factory_source_dir)/src/sylplugin_factory.h
+customview_la_SOURCES = customview.c
 
 customview_la_LDFLAGS = -module -no-undefined -avoid-version
 
