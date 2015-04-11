@@ -6,6 +6,13 @@ Customize your Sylpheed user interface.
 This plugin supports to customize Sylpheed user interface
 such as two pane view.
 
+Supported Features
+------------------
+
+* Two column layout
+  It shows summaryview and messageview only.
+  This layout is suitable for wide display such as HD (1366 x 768)
+
 Requirement
 -----------
 

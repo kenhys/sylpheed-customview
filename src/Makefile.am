@@ -6,7 +6,7 @@ customview_la_SOURCES = customview.c \
 
 customview_la_LDFLAGS = -module -no-undefined -avoid-version
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	$(GTK_CFLAGS) \
 	-I$(includedir) \
 	-I$(sylpheed_build_dir) \
